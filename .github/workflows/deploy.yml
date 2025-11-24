@@ -3,22 +3,23 @@ name: Deploy Vite React to GitHub Pages
 on:
   push:
     branches:
-      - main # Trigger on pushes to main
+      - main # Trigger on pushes to main branch
+  workflow_dispatch: # Optional manual trigger
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repository
-      - name: Checkout code
+      # Step 1: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       # Step 2: Setup Node.js
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "20"
+          node-version: "20" # Node 20 recommended for Actions
 
       # Step 3: Install dependencies
       - name: Install dependencies
@@ -34,5 +35,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          force_orphan: true # forces creating gh-pages if it doesn’t exist
-
+          force_orphan: true
