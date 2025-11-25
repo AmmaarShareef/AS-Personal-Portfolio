@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { FaGithub } from 'react-icons/fa';
 import clashRoyaleImg from '../assets/clash-royale.jpg';
 import opencvImg from '../assets/opencv.png';
 import pheonixImg from '../assets/pheonix.png';
@@ -10,7 +11,8 @@ const projectsData = [
     description: "Built a real-time computer vision pipeline using YOLOv8, OpenCV, and MSS for screen capture to detect and classify Clash Royale cards from live gameplay, including a custom-trained YOLOv8 model on my own labeled dataset. Integrated Python-based event logic for elixir tracking, card-cycle timing, and opponent deck prediction.",
     tags: ["YOLOv8", "OpenCV", "Python", "Computer Vision"],
     image: clashRoyaleImg,
-    color: "from-purple-600 to-blue-600"
+    color: "from-purple-600 to-blue-600",
+    github: "https://github.com/AmmaarShareef/Clash-Royale-Bot"
   },
   {
     id: 2,
@@ -26,7 +28,8 @@ const projectsData = [
     description: "A wildfire precaution and response system frontend. Designed to provide real-time alerts and resource management for emergency responders and affected communities.",
     tags: ["React", "Frontend", "UI/UX"],
     image: pheonixImg,
-    color: "from-orange-500 to-red-600"
+    color: "from-orange-500 to-red-600",
+    github: "https://github.com/AmmaarShareef/MEC-2025-Frontend"
   }
 ];
 
@@ -77,9 +80,23 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <p className="text-gray-400 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 absolute top-40 left-8 right-8">
-                  {project.description}
-                </p>
+                <div className="absolute top-40 left-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 flex flex-col gap-4">
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {project.description}
+                  </p>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-white/80 hover:text-white transition-colors w-fit group/link"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <FaGithub className="text-xl" />
+                      <span className="text-sm font-medium border-b border-transparent group-hover/link:border-white transition-all">View Code</span>
+                    </a>
+                  )}
+                </div>
 
                 {/* Initial state description (truncated or hidden) */}
                 <div className="absolute bottom-8 left-0 right-0 flex justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
