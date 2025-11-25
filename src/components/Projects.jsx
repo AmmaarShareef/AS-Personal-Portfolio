@@ -54,7 +54,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="group relative bg-[#0a0a0a] rounded-[2rem] overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-500 h-[400px] hover:h-[600px] flex flex-col"
+              className="group relative bg-[#0a0a0a] rounded-[2rem] overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-500 h-[400px] hover:h-[750px] flex flex-col"
             >
               {/* Image Section */}
               <div className="h-64 w-full relative overflow-hidden shrink-0">
@@ -80,7 +80,7 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <div className="absolute top-40 left-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 flex flex-col gap-4">
+                <div className="absolute top-36 left-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 flex flex-col gap-4">
                   <p className="text-gray-400 text-sm leading-relaxed">
                     {project.description}
                   </p>
