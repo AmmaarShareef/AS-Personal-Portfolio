@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 import clashRoyaleImg from '../assets/clash-royale.jpg';
-import opencvImg from '../assets/opencv.png';
+import goofyRivia from '../assets/GoofyRivia.png';
 import pheonixImg from '../assets/pheonix.png';
 
 const projectsData = [
@@ -16,11 +16,12 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "OpenCV Frame Extractor",
-    description: "A specialized tool for extracting high-quality frames from video feeds for dataset creation and analysis. Optimized for performance and ease of use in computer vision workflows.",
+    title: "Multiplayer Trivia game",
+    description: "GoofyRivia is a local Jackbox‑style murder trivia game built with TypeScript, React (frontend), and Node.js/Express (backend). Players can join a lobby, receive questions, and play in real time — all locally on your machine.",
     tags: ["OpenCV", "Python", "Image Processing"],
-    image: opencvImg,
-    color: "from-green-500 to-cyan-500"
+    image: goofyRivia,
+    color: "from-green-500 to-cyan-500",
+    github: "https://github.com/AmmaarShareef/GoofyRivia"
   },
   {
     id: 3,

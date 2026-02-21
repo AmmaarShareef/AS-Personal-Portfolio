@@ -51,13 +51,13 @@ const LeetCode = () => {
                                     strokeWidth="8"
                                     fill="transparent"
                                     strokeDasharray={2 * Math.PI * 60}
-                                    strokeDashoffset={2 * Math.PI * 60 * (1 - 19 / 3758)}
+                                    strokeDashoffset={2 * Math.PI * 60 * (1 - 21 / 3758)}
                                     className="text-yellow-500"
                                     strokeLinecap="round"
                                 />
                             </svg>
                             <div className="absolute inset-0 flex flex-col items-center justify-center">
-                                <span className="text-2xl font-bold text-white">19</span>
+                                <span className="text-2xl font-bold text-white">21</span>
                                 <span className="text-xs text-gray-500">/ 3758</span>
                             </div>
                         </div>
