@@ -40,7 +40,7 @@ const PlayerCard = () => {
 
           {/* Top-left: rating + position */}
           <div className="absolute top-4 left-5 flex flex-col items-center">
-            <span className="font-display text-gradient-gold text-[2.75rem] leading-none">90</span>
+            <span className="font-display text-gradient-gold text-[2.75rem] leading-none">87</span>
             <span className="font-head text-gold-200 tracking-widest text-sm mt-0.5">CS</span>
             <div className="mt-1.5 w-7 h-[1.5px] bg-gold-300/70" />
             <div className="mt-1.5 flex flex-col gap-0.5 items-center">
