@@ -118,8 +118,8 @@ const Hero = () => {
           <div className="mt-8 w-full max-w-3xl">
             <div className="hud-divider mb-5" />
             <div className="grid grid-cols-3 sm:grid-cols-6 gap-y-5">
-              <HUDStat label="OVERALL" value="87" />
-              <HUDStat label="POTENTIAL" value="98" accent="cyan" />
+              <HUDStat label="OVERALL" value="85" />
+              <HUDStat label="POTENTIAL" value="96" accent="cyan" />
               <HUDStat label="AGE" value="19" />
               <HUDStat label="HEIGHT" value="5'9" />
               <HUDStat label="FOOT" value="R" />

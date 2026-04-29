@@ -3,15 +3,28 @@ import pfp from '../assets/pfp.jpeg';
 
 /**
  * FUT-style Ultimate Team card.
- * Stats reinterpreted as developer attributes.
+ * Stats reinterpreted as developer attributes — derived from a real audit of:
+ *   - public GitHub (21 repos, 5+ langs)
+ *   - LeetCode (@ammhood1602)
+ *   - 1XC3 coursework (58 C files, bit ops, linked lists + file I/O, bash)
+ *   - 1XD3 coursework (81 PHP, 16 SQL, 30 JS — HaydenHub fullstack + Zip Puzzle)
+ * Scale: 80 = absolute beginner, 99 = Altman/Gates tier.
+ *   PRG  87  · 21 GH repos + 58 C files + 81 PHP + 30 JS — strong breadth
+ *   AI   81  · custom-trained YOLOv8, Gemini API, real CV pipelines
+ *   DSA  80  · linked-list+file-I/O in C, but only 22 LC — weakest area
+ *   DSN  86  · clean hackathon frontends + this portfolio
+ *   GRT  88  · consistent push cadence, multiple hackathons shipped
+ *   CRE  87  · bot / game / hackathon / tooling / fullstack — wide range
+ *   --------
+ *   OVR  85  (mean of attributes)
  */
 const stats = [
-  { key: 'PRG', label: 'Programming', value: 92 },
-  { key: 'AI',  label: 'ML / AI',     value: 89 },
-  { key: 'DSA', label: 'Algorithms',  value: 86 },
-  { key: 'DSN', label: 'Design / UX', value: 90 },
-  { key: 'GRT', label: 'Grit',        value: 95 },
-  { key: 'CRE', label: 'Creativity',  value: 93 },
+  { key: 'PRG', label: 'Programming', value: 87 },
+  { key: 'AI',  label: 'ML / AI',     value: 81 },
+  { key: 'DSA', label: 'Algorithms',  value: 80 },
+  { key: 'DSN', label: 'Design / UX', value: 86 },
+  { key: 'GRT', label: 'Grit',        value: 88 },
+  { key: 'CRE', label: 'Creativity',  value: 87 },
 ];
 
 const PlayerCard = () => {
@@ -40,7 +53,7 @@ const PlayerCard = () => {
 
           {/* Top-left: rating + position */}
           <div className="absolute top-4 left-5 flex flex-col items-center">
-            <span className="font-display text-gradient-gold text-[2.75rem] leading-none">87</span>
+            <span className="font-display text-gradient-gold text-[2.75rem] leading-none">85</span>
             <span className="font-head text-gold-200 tracking-widest text-sm mt-0.5">CS</span>
             <div className="mt-1.5 w-7 h-[1.5px] bg-gold-300/70" />
             <div className="mt-1.5 flex flex-col gap-0.5 items-center">

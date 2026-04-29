@@ -105,7 +105,7 @@ const TopBar = () => {
             <span className="font-head text-[11px] tracking-widest text-white/70">ONLINE · {time}</span>
           </div>
           <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full border-gold border bg-gradient-to-b from-gold-300/15 to-transparent">
-            <span className="font-display text-gold-200 text-base leading-none mt-0.5">87</span>
+            <span className="font-display text-gold-200 text-base leading-none mt-0.5">85</span>
             <span className="font-head text-[10px] tracking-widest text-gold-200/80">OVR</span>
           </div>
         </div>

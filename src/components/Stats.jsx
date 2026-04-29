@@ -1,41 +1,55 @@
 import { motion, useInView } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 
+/**
+ * Attribute ratings — calibrated against an audit of:
+ *   - public GitHub (21 repos)
+ *   - LeetCode (@ammhood1602)
+ *   - 1XC3 coursework (C/systems/Linux — A1-A4 + 25 weeks of labs)
+ *   - 1XD3 coursework (fullstack PHP/MySQL/JS — HaydenHub + Zip Puzzle)
+ *
+ * Anchors:
+ *   < 75  · touched once, no real depth
+ *   75-80 · functional, can ship small things
+ *   80-85 · comfortable, multiple shipped projects
+ *   85-90 · strong, leans on it daily
+ *   90+   · genuine specialty
+ */
 const groups = [
   {
     head: 'TECHNICAL',
     accent: 'gold',
     items: [
-      { k: 'Python',         v: 93 },
-      { k: 'TypeScript',     v: 88 },
-      { k: 'React',          v: 90 },
-      { k: 'C / C++',        v: 78 },
-      { k: 'Java',           v: 80 },
-      { k: 'SQL',            v: 75 },
+      { k: 'JavaScript',     v: 86 }, // 16/21 GH repos + vanilla-JS classes & AJAX in 1XD3
+      { k: 'React',          v: 84 }, // MEC frontend + this site
+      { k: 'C / Systems',    v: 82 }, // 1XC3: bit ops, linked lists, file I/O, bash, makefiles
+      { k: 'SQL / MySQL',    v: 84 }, // 1XD3: real schemas, FKs, JOINs, aggregates, 16 SQL files
+      { k: 'Python',         v: 80 }, // Clash-Royale-Bot + ML pipelines
+      { k: 'TypeScript',     v: 78 }, // GoofyRivia + portfolio
     ],
   },
   {
     head: 'AI / DATA',
     accent: 'cyan',
     items: [
-      { k: 'PyTorch',        v: 86 },
-      { k: 'YOLOv8 / CV',    v: 91 },
-      { k: 'OpenCV',         v: 89 },
-      { k: 'Scikit-learn',   v: 82 },
-      { k: 'NumPy / Pandas', v: 88 },
-      { k: 'Prompting',      v: 92 },
+      { k: 'Prompting / LLM',v: 86 }, // Gemini API in GoofyRivia
+      { k: 'YOLOv8 / CV',    v: 84 }, // custom-trained model
+      { k: 'OpenCV',         v: 82 }, // bot pipeline + frame extractor
+      { k: 'PyTorch',        v: 78 }, // via YOLOv8 stack
+      { k: 'NumPy / Pandas', v: 78 }, // implied by ML work
+      { k: 'Scikit-learn',   v: 72 }, // no direct public evidence
     ],
   },
   {
     head: 'BUILDER',
     accent: 'gold',
     items: [
-      { k: 'Tailwind CSS',   v: 94 },
-      { k: 'Framer Motion',  v: 87 },
-      { k: 'Node / Express', v: 84 },
-      { k: 'Vite',           v: 86 },
-      { k: 'Git / GitHub',   v: 90 },
-      { k: 'Figma',          v: 83 },
+      { k: 'Tailwind CSS',   v: 86 }, // portfolio + frontend work
+      { k: 'Git / GitHub',   v: 86 }, // 21 repos + multi-author 1XD3 collab
+      { k: 'PHP / Backend',  v: 84 }, // 81 PHP files: PDO, sessions, auth, AJAX
+      { k: 'Figma',          v: 84 }, // self-rated (private projects)
+      { k: 'Framer Motion',  v: 80 }, // this site’s motion
+      { k: 'Node / Express', v: 76 }, // GoofyRivia backend
     ],
   },
 ];
@@ -137,9 +151,9 @@ const Stats = () => {
             <span className="text-gradient-gold">STAT SHEET</span>
           </h2>
           <p className="text-white/55 max-w-md text-sm">
-            Self-rated, calibrated against hours logged, projects shipped, and
-            the number of times I’ve had to read the same Stack Overflow answer.
-            Placeholder, do not represent actual statistics.
+            Calibrated against an audit of every public repo I own and my LeetCode
+            progress. 80 floor = absolute beginner, 99 ceiling = founder-of-tech-giant.
+            Conservative where evidence is thin.
           </p>
         </div>
 

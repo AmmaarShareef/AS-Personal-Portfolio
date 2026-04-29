@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import {
   SiReact, SiTypescript, SiTailwindcss, SiPython, SiPytorch, SiOpencv,
-  SiNodedotjs, SiFramer, SiVite, SiGit, SiFigma, SiNumpy
+  SiNodedotjs, SiFigma, SiGit, SiPhp, SiNumpy
 } from 'react-icons/si';
 
 /**
@@ -9,22 +9,24 @@ import {
  * Pure decorative + canonical — the squad.
  */
 
+// Ratings mirror the Stats sheet so the squad stays consistent with the audit.
+// PHP signed in to replace Figma after 1XD3 coursework provided real backend evidence.
 const players = [
   // GK (foundation)
-  { row: 0, x: 50, name: 'Vite',        rating: 86, role: 'GK',  icon: SiVite,        accent: 'gold' },
+  { row: 0, x: 50, name: 'Figma',       rating: 84, role: 'GK',  icon: SiFigma,       accent: 'gold' },
   // Defenders
-  { row: 1, x: 18, name: 'Git',         rating: 90, role: 'LB',  icon: SiGit,         accent: 'gold' },
-  { row: 1, x: 38, name: 'Node',        rating: 84, role: 'CB',  icon: SiNodedotjs,   accent: 'gold' },
-  { row: 1, x: 62, name: 'NumPy',       rating: 88, role: 'CB',  icon: SiNumpy,       accent: 'gold' },
-  { row: 1, x: 82, name: 'Figma',       rating: 83, role: 'RB',  icon: SiFigma,       accent: 'gold' },
+  { row: 1, x: 18, name: 'Git',         rating: 86, role: 'LB',  icon: SiGit,         accent: 'gold' },
+  { row: 1, x: 38, name: 'Node',        rating: 76, role: 'CB',  icon: SiNodedotjs,   accent: 'gold' },
+  { row: 1, x: 62, name: 'NumPy',       rating: 78, role: 'CB',  icon: SiNumpy,       accent: 'gold' },
+  { row: 1, x: 82, name: 'PHP',         rating: 84, role: 'RB',  icon: SiPhp,         accent: 'gold' },
   // Midfield
-  { row: 2, x: 25, name: 'TypeScript',  rating: 88, role: 'CM',  icon: SiTypescript,  accent: 'cyan' },
-  { row: 2, x: 50, name: 'Python',      rating: 93, role: 'CAM', icon: SiPython,      accent: 'cyan' },
-  { row: 2, x: 75, name: 'Tailwind',    rating: 94, role: 'CM',  icon: SiTailwindcss, accent: 'cyan' },
+  { row: 2, x: 25, name: 'TypeScript',  rating: 78, role: 'CM',  icon: SiTypescript,  accent: 'cyan' },
+  { row: 2, x: 50, name: 'Python',      rating: 80, role: 'CAM', icon: SiPython,      accent: 'cyan' },
+  { row: 2, x: 75, name: 'Tailwind',    rating: 86, role: 'CM',  icon: SiTailwindcss, accent: 'cyan' },
   // Forwards
-  { row: 3, x: 22, name: 'OpenCV',      rating: 89, role: 'LW',  icon: SiOpencv,      accent: 'gold' },
-  { row: 3, x: 50, name: 'PyTorch',     rating: 86, role: 'ST',  icon: SiPytorch,     accent: 'gold' },
-  { row: 3, x: 78, name: 'React',       rating: 90, role: 'RW',  icon: SiReact,       accent: 'gold' },
+  { row: 3, x: 22, name: 'OpenCV',      rating: 82, role: 'LW',  icon: SiOpencv,      accent: 'gold' },
+  { row: 3, x: 50, name: 'PyTorch',     rating: 78, role: 'ST',  icon: SiPytorch,     accent: 'gold' },
+  { row: 3, x: 78, name: 'React',       rating: 84, role: 'RW',  icon: SiReact,       accent: 'gold' },
 ];
 
 const Player = ({ p, idx }) => {
